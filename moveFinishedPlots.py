@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 from os import listdir
 from os.path import isfile, join
@@ -13,7 +14,7 @@ target: str = sys.argv[2]
 
 while True:
 	print(f"Looking for plot files in {source}.")
-	sourceFiles = [f for f in listdir(source) if isfile(join(source, f)) and (".plot" in f or ".PLOT" in f) ]
+	sourceFiles = [f for f in listdir(source) if isfile(join(source, f)) and (f.endswith(".plot") or f.endswith(".PLOT") ]
 	numPlots: int = len(sourceFiles)
 	print(f"Found {numPlots} plots.")
 	t: float = time.monotonic()
