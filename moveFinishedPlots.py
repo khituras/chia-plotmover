@@ -14,7 +14,7 @@ target: str = sys.argv[2]
 
 while True:
 	print(f"Looking for plot files in {source}.")
-	sourceFiles = [f for f in listdir(source) if isfile(join(source, f)) and (f.endswith(".plot") or f.endswith(".PLOT") ]
+	sourceFiles = [f for f in listdir(source) if isfile(join(source, f)) and (f.endswith(".plot") or f.endswith(".PLOT")) ]
 	numPlots: int = len(sourceFiles)
 	print(f"Found {numPlots} plots.")
 	t: float = time.monotonic()
