@@ -1,5 +1,6 @@
 # chia-plotmover
 A simple python script to move finished plots to their final destination.
+
 Usage: `python3 moveFinishedPlots.py <from dir> <to dir>`
 
 The script scans the `<from dir>` in a regular interval, currently 30 minutes. If files with the `.plot` or `.PLOT` extensions are found, those are moved to the `<to dir>`.
